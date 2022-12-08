@@ -16,11 +16,11 @@ api = Api(app, version="1.0", title="API teste")
 us = api.namespace("user", description="teste")
 
 
-@us.route('/teste', doc={"description":"testee"})
+@us.route('/teste2', doc={"description":"testee"})
 class Index(Resource):
     @us.doc(responses={200: "bora bil"})
     def get(self):
-        resp = make_response(jsonify({"message":"funcionou"}), 200)
+        resp = make_response(jsonify({"message":"fuuuncionooou"}), 200)
         resp.headers["Access-Control-Allow-Origin"] = "*"
 
         return resp
